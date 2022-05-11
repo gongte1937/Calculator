@@ -1,0 +1,90 @@
+:root{
+    --general-background-color: #333;
+    --calculator-dark-color:#fff;
+    --calculator-width:300px;
+    --calculator-height: 400px;
+    --calculator--display-color: #a7af7c;
+    --key-size:80px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: console, Courier, monospace;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:var(--general-background-color) ;
+
+}
+.calculator{
+    position: relative;
+    min-width: var(--calculator-width);
+    min-height: var(--calculator-height);
+    background: var(--general-background-color);
+    padding: 40px,30px,30px;
+    border-radius: 20px;
+    box-shadow: 
+    25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25),
+    inset -5px -5px 15px rgba(0,0,0,1),
+    inset 5px 5px 15px rgba(0,0,0,0.5);
+
+}
+
+.calculator{
+    position: relative;
+    display: grid ;
+}
+
+.calculator .value{
+    position: relative;
+    padding: relative;
+    grid-column: span 4;
+    height: 100px;
+    left: 10px;
+    width: calc(100% - 30px);
+    border: none ;
+    outline: none ;
+    background-color: var(--calculator--display-color);
+
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 2rem;
+    padding: 10px;
+}
+.calculator span{
+    position: relative;
+    display: grid;
+    place-items: center;
+    color:var(--calculator-dark-color);
+    width:var(var(--key-size));
+    height: var(var(--key-size));
+    margin: calc(var(--key-size)/10);
+    background: linear-gradient(#3f3f3f,#2f2f2f);
+    box-shadow: 
+    inset -8px 0 8px rgba(0, 0, 0, 0.25),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.15),
+    0 0 2px rgba(0, 0, 0, 0.2),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 500px;
+}
+.calculator span::before{
+    content: '';
+    position: abosolute;
+    top: calc(var(--calculator-width));
+    left: calc(var(--calculator-height));
+    border-left: 1px solid #0004;
+    border-top: 1px solid #0004;
+    border-bottom: 1px solid #0004; 
+    box-shadow: ;
+
+}
